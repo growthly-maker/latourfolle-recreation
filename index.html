@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tour Folle - Les échecs simplifiés</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="La Tour Folle">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="jouer.html">Jouer</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Se connecter</a>
+                <a href="signup.html" class="btn btn-signup">S'inscrire</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Les échecs n'ont jamais été aussi simples qu'avec La tour folle</h1>
+                    <p>Apprenez, jouez et progressez en échecs à votre rythme avec des cours adaptés à tous les niveaux.</p>
+                    <div class="hero-buttons">
+                        <a href="signup.html" class="btn btn-primary">Commencer gratuitement</a>
+                        <a href="cours.html" class="btn btn-secondary">Découvrir nos cours</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-chess.png" alt="Échecs">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Pourquoi choisir La Tour Folle ?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Apprentissage adapté</h3>
+                        <p>Des cours structurés par niveau et des exercices progressifs pour apprendre à votre rythme.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3>Jeu en ligne</h3>
+                        <p>Affrontez d'autres joueurs ou l'ordinateur pour mettre en pratique vos connaissances.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Suivi de progression</h3>
+                        <p>Suivez votre évolution et identifiez vos points forts et vos axes d'amélioration.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Communauté active</h3>
+                        <p>Rejoignez une communauté de passionnés et échangez sur votre passion commune.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nos cours populaires</h2>
+                    <a href="cours.html" class="btn btn-outline">Voir tous les cours</a>
+                </div>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-debutant.jpg" alt="Cours pour débutants">
+                            <div class="course-level">Débutant</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Initiation aux échecs</h3>
+                            <p>Apprenez les règles de base et les premiers mouvements stratégiques.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 10 leçons</span>
+                                <span><i class="fas fa-users"></i> 2.5k élèves</span>
+                            </div>
+                            <a href="cours-debutant.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-intermediaire.jpg" alt="Cours intermédiaire">
+                            <div class="course-level">Intermédiaire</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Stratégies d'ouverture</h3>
+                            <p>Maîtrisez les ouvertures classiques et développez votre jeu stratégique.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 15 leçons</span>
+                                <span><i class="fas fa-users"></i> 1.8k élèves</span>
+                            </div>
+                            <a href="cours-intermediaire.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-avance.jpg" alt="Cours avancé">
+                            <div class="course-level">Avancé</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Tactiques de milieu de jeu</h3>
+                            <p>Perfectionnez vos combinaisons tactiques et votre vision du jeu.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 20 leçons</span>
+                                <span><i class="fas fa-users"></i> 950 élèves</span>
+                            </div>
+                            <a href="cours-avance.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Ce que disent nos membres</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"La Tour Folle m'a permis de progresser rapidement en échecs. Les cours sont clairs et bien structurés, et la communauté est très bienveillante."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/testimonial-1.jpg" alt="Sophie L.">
+                            <div>
+                                <h4>Sophie L.</h4>
+                                <p>Membre depuis 2 ans</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Je cherchais une plateforme pour apprendre les échecs à mon rythme, et La Tour Folle est parfaite pour ça. Je recommande vivement!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/testimonial-2.jpg" alt="Thomas D.">
+                            <div>
+                                <h4>Thomas D.</h4>
+                                <p>Membre depuis 8 mois</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Les exercices pratiques et le suivi de progression m'ont aidé à identifier mes points faibles et à vraiment m'améliorer."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="images/testimonial-3.jpg" alt="Marie P.">
+                            <div>
+                                <h4>Marie P.</h4>
+                                <p>Membre depuis 1 an</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à améliorer votre jeu d'échecs ?</h2>
+                <p>Rejoignez notre communauté de joueurs passionnés et progressez à votre rythme.</p>
+                <a href="signup.html" class="btn btn-large">Commencer gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo-white.png" alt="La Tour Folle" class="footer-logo">
+                    <p>La Tour Folle est une plateforme dédiée à l'apprentissage et à la pratique des échecs, accessible à tous les niveaux.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="jouer.html">Jouer</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                        <li><a href="regles.html">Règles du jeu</a></li>
+                        <li><a href="notations.html">Notations</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recevez nos actualités et conseils d'échecs</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Tour Folle. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
