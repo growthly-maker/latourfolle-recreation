@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours d'échecs - La Tour Folle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="La Tour Folle">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html" class="active">Cours</a></li>
+                    <li><a href="jouer.html">Jouer</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Se connecter</a>
+                <a href="signup.html" class="btn btn-signup">S'inscrire</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Nos cours d'échecs</h1>
+                <p>Des formations adaptées à tous les niveaux pour progresser à votre rythme</p>
+            </div>
+        </section>
+
+        <section class="courses-filters">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Niveau</label>
+                        <select>
+                            <option value="">Tous les niveaux</option>
+                            <option value="debutant">Débutant</option>
+                            <option value="intermediaire">Intermédiaire</option>
+                            <option value="avance">Avancé</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Catégorie</label>
+                        <select>
+                            <option value="">Toutes les catégories</option>
+                            <option value="ouvertures">Ouvertures</option>
+                            <option value="milieu">Milieu de jeu</option>
+                            <option value="finales">Finales</option>
+                            <option value="tactiques">Tactiques</option>
+                            <option value="strategie">Stratégie</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Durée</label>
+                        <select>
+                            <option value="">Toutes les durées</option>
+                            <option value="court">Court (< 5h)</option>
+                            <option value="moyen">Moyen (5-10h)</option>
+                            <option value="long">Long (> 10h)</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">Filtrer</button>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Rechercher un cours...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="container">
+                <h2>Cours pour débutants</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-debutant.jpg" alt="Initiation aux échecs">
+                            <div class="course-level">Débutant</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Initiation aux échecs</h3>
+                            <p>Apprenez les règles de base et les premiers mouvements stratégiques.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 10 leçons</span>
+                                <span><i class="fas fa-users"></i> 2.5k élèves</span>
+                            </div>
+                            <a href="cours-debutant.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-debutant2.jpg" alt="Les déplacements des pièces">
+                            <div class="course-level">Débutant</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Les déplacements des pièces</h3>
+                            <p>Maîtrisez le mouvement de chaque pièce et leurs particularités.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 8 leçons</span>
+                                <span><i class="fas fa-users"></i> 2.1k élèves</span>
+                            </div>
+                            <a href="cours-debutant2.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-debutant3.jpg" alt="Premiers principes d'ouverture">
+                            <div class="course-level">Débutant</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Premiers principes d'ouverture</h3>
+                            <p>Découvrez les principes fondamentaux pour bien débuter une partie.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 12 leçons</span>
+                                <span><i class="fas fa-users"></i> 1.9k élèves</span>
+                            </div>
+                            <a href="cours-debutant3.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="container">
+                <h2>Cours intermédiaires</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-intermediaire.jpg" alt="Stratégies d'ouverture">
+                            <div class="course-level">Intermédiaire</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Stratégies d'ouverture</h3>
+                            <p>Maîtrisez les ouvertures classiques et développez votre jeu stratégique.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 15 leçons</span>
+                                <span><i class="fas fa-users"></i> 1.8k élèves</span>
+                            </div>
+                            <a href="cours-intermediaire.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-intermediaire2.jpg" alt="Combinaisons tactiques">
+                            <div class="course-level">Intermédiaire</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Combinaisons tactiques</h3>
+                            <p>Apprenez à repérer et exécuter des combinaisons tactiques efficaces.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 18 leçons</span>
+                                <span><i class="fas fa-users"></i> 1.5k élèves</span>
+                            </div>
+                            <a href="cours-intermediaire2.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-intermediaire3.jpg" alt="Notions de stratégie">
+                            <div class="course-level">Intermédiaire</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Notions de stratégie</h3>
+                            <p>Développez votre compréhension stratégique et améliorez votre planification.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 14 leçons</span>
+                                <span><i class="fas fa-users"></i> 1.3k élèves</span>
+                            </div>
+                            <a href="cours-intermediaire3.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div class="container">
+                <h2>Cours avancés</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-avance.jpg" alt="Tactiques de milieu de jeu">
+                            <div class="course-level">Avancé</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Tactiques de milieu de jeu</h3>
+                            <p>Perfectionnez vos combinaisons tactiques et votre vision du jeu.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 20 leçons</span>
+                                <span><i class="fas fa-users"></i> 950 élèves</span>
+                            </div>
+                            <a href="cours-avance.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-avance2.jpg" alt="Finales complexes">
+                            <div class="course-level">Avancé</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Finales complexes</h3>
+                            <p>Maîtrisez les finales complexes et améliorez votre technique de jeu.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 16 leçons</span>
+                                <span><i class="fas fa-users"></i> 780 élèves</span>
+                            </div>
+                            <a href="cours-avance2.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="images/course-avance3.jpg" alt="Analyse positionelle">
+                            <div class="course-level">Avancé</div>
+                        </div>
+                        <div class="course-content">
+                            <h3>Analyse positionnelle</h3>
+                            <p>Développez votre capacité à analyser les positions complexes et à élaborer des plans.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> 22 leçons</span>
+                                <span><i class="fas fa-users"></i> 650 élèves</span>
+                            </div>
+                            <a href="cours-avance3.html" class="btn btn-block">Commencer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à améliorer votre jeu d'échecs ?</h2>
+                <p>Rejoignez notre communauté de joueurs passionnés et progressez à votre rythme.</p>
+                <a href="signup.html" class="btn btn-large">Commencer gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo-white.png" alt="La Tour Folle" class="footer-logo">
+                    <p>La Tour Folle est une plateforme dédiée à l'apprentissage et à la pratique des échecs, accessible à tous les niveaux.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="jouer.html">Jouer</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                        <li><a href="regles.html">Règles du jeu</a></li>
+                        <li><a href="notations.html">Notations</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recevez nos actualités et conseils d'échecs</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Tour Folle. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/combine-css.js"></script>
+</body>
+</html>
