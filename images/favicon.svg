@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Fond transparent -->
+  <rect width="32" height="32" fill="none"/>
+  
+  <!-- Tour d'échecs stylisée -->
+  <path d="M5 3 L5 29 L27 29 L27 22 L21 22 L21 10 L27 10 L27 3 Z" fill="#4c6ef5"/>
+</svg>
