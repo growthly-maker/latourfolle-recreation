@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jouer aux échecs - La Tour Folle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="css/chess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="La Tour Folle">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="jouer.html" class="active">Jouer</a></li>
+                    <li><a href="ressources.html">Ressources</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Se connecter</a>
+                <a href="signup.html" class="btn btn-signup">S'inscrire</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Jouer aux échecs</h1>
+                <p>Affrontez des joueurs du monde entier ou entraînez-vous contre l'ordinateur</p>
+            </div>
+        </section>
+
+        <section class="play-options">
+            <div class="container">
+                <div class="options-grid">
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Jouer contre l'ordinateur</h3>
+                        <p>Entraînez-vous et améliorez votre jeu en affrontant notre IA à différents niveaux de difficulté.</p>
+                        <a href="#chess-board" class="btn btn-primary">Jouer maintenant</a>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Jouer en ligne</h3>
+                        <p>Affrontez des joueurs du monde entier avec un système de classement ELO et des parties classées.</p>
+                        <a href="#" class="btn btn-primary">Chercher un adversaire</a>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Tournois</h3>
+                        <p>Participez à nos tournois réguliers et gagnez des prix tout en progressant.</p>
+                        <a href="#" class="btn btn-primary">Voir les tournois</a>
+                    </div>
+                    <div class="option-card">
+                        <div class="option-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Puzzles et exercices</h3>
+                        <p>Résolvez des puzzles tactiques et des problèmes d'échecs pour améliorer votre vision du jeu.</p>
+                        <a href="#" class="btn btn-primary">Découvrir les puzzles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chess-board" class="chess-game">
+            <div class="container">
+                <h2>Partie contre l'ordinateur</h2>
+                <div class="game-settings">
+                    <div class="setting-group">
+                        <label>Niveau de difficulté:</label>
+                        <select id="difficulty">
+                            <option value="1">Débutant</option>
+                            <option value="2">Facile</option>
+                            <option value="3" selected>Intermédiaire</option>
+                            <option value="4">Difficile</option>
+                            <option value="5">Expert</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label>Votre couleur:</label>
+                        <div class="color-options">
+                            <label>
+                                <input type="radio" name="color" value="white" checked>
+                                <span class="color-option white"><i class="fas fa-chess-pawn"></i></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="color" value="black">
+                                <span class="color-option black"><i class="fas fa-chess-pawn"></i></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="color" value="random">
+                                <span class="color-option random"><i class="fas fa-random"></i></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <label>Temps par joueur:</label>
+                        <select id="time">
+                            <option value="1">1 minute</option>
+                            <option value="3">3 minutes</option>
+                            <option value="5" selected>5 minutes</option>
+                            <option value="10">10 minutes</option>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="0">Pas de limite</option>
+                        </select>
+                    </div>
+                    <button id="start-game" class="btn btn-primary">Nouvelle partie</button>
+                </div>
+
+                <div class="game-container">
+                    <div class="player-info opponent">
+                        <div class="player-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="player-details">
+                            <h4>Ordinateur</h4>
+                            <div class="rating">ELO: 1500</div>
+                        </div>
+                        <div class="timer">05:00</div>
+                        <div class="captured-pieces">
+                            <!-- Pièces capturées par le joueur -->
+                        </div>
+                    </div>
+
+                    <div class="chess-board">
+                        <div class="board-container">
+                            <!-- Échiquier généré par JavaScript -->
+                            <div id="board"></div>
+                        </div>
+                        <div class="board-notation">
+                            <div class="files">
+                                <span>a</span><span>b</span><span>c</span><span>d</span>
+                                <span>e</span><span>f</span><span>g</span><span>h</span>
+                            </div>
+                            <div class="ranks">
+                                <span>8</span><span>7</span><span>6</span><span>5</span>
+                                <span>4</span><span>3</span><span>2</span><span>1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="player-info current-player">
+                        <div class="player-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="player-details">
+                            <h4>Vous</h4>
+                            <div class="rating">ELO: 1200</div>
+                        </div>
+                        <div class="timer">05:00</div>
+                        <div class="captured-pieces">
+                            <!-- Pièces capturées par l'ordinateur -->
+                        </div>
+                    </div>
+
+                    <div class="game-controls">
+                        <button class="btn btn-secondary" id="undo-move"><i class="fas fa-undo"></i> Annuler</button>
+                        <button class="btn btn-secondary" id="flip-board"><i class="fas fa-retweet"></i> Rotation</button>
+                        <button class="btn btn-secondary" id="hint"><i class="far fa-lightbulb"></i> Indice</button>
+                        <button class="btn btn-danger" id="resign"><i class="fas fa-flag"></i> Abandonner</button>
+                    </div>
+                </div>
+
+                <div class="move-history">
+                    <h3>Historique des coups</h3>
+                    <div class="history-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Blancs</th>
+                                    <th>Noirs</th>
+                                </tr>
+                            </thead>
+                            <tbody id="moves-table">
+                                <!-- Les coups seront ajoutés ici par JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <h2>Vos statistiques</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Classement ELO</h3>
+                            <p class="stat-value">1200</p>
+                            <p class="stat-change positive">+15 ce mois</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Victoires</h3>
+                            <p class="stat-value">42</p>
+                            <p class="stat-change">57% des parties</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Parties jouées</h3>
+                            <p class="stat-value">74</p>
+                            <p class="stat-change">12 ce mois</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Temps de jeu</h3>
+                            <p class="stat-value">24h 30min</p>
+                            <p class="stat-change">3h ce mois</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <div class="container">
+                <h2>Classement des joueurs</h2>
+                <div class="leaderboard-container">
+                    <table class="leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Rang</th>
+                                <th>Joueur</th>
+                                <th>ELO</th>
+                                <th>Parties</th>
+                                <th>Victoires</th>
+                                <th>Évolution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <img src="images/player1.jpg" alt="Joueur 1">
+                                    </div>
+                                    <span>GMaster2000</span>
+                                </td>
+                                <td>2345</td>
+                                <td>1250</td>
+                                <td>68%</td>
+                                <td class="change positive">+5</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <img src="images/player2.jpg" alt="Joueur 2">
+                                    </div>
+                                    <span>ChessMaster</span>
+                                </td>
+                                <td>2298</td>
+                                <td>980</td>
+                                <td>72%</td>
+                                <td class="change negative">-3</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <img src="images/player3.jpg" alt="Joueur 3">
+                                    </div>
+                                    <span>QueenPower</span>
+                                </td>
+                                <td>2275</td>
+                                <td>1430</td>
+                                <td>65%</td>
+                                <td class="change positive">+12</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <img src="images/player4.jpg" alt="Joueur 4">
+                                    </div>
+                                    <span>KnightRider</span>
+                                </td>
+                                <td>2210</td>
+                                <td>890</td>
+                                <td>61%</td>
+                                <td class="change positive">+8</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <img src="images/player5.jpg" alt="Joueur 5">
+                                    </div>
+                                    <span>BishopElite</span>
+                                </td>
+                                <td>2185</td>
+                                <td>1150</td>
+                                <td>58%</td>
+                                <td class="change negative">-7</td>
+                            </tr>
+                            <tr class="current-user">
+                                <td>156</td>
+                                <td class="player">
+                                    <div class="player-avatar small">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span>Vous</span>
+                                </td>
+                                <td>1200</td>
+                                <td>74</td>
+                                <td>57%</td>
+                                <td class="change positive">+15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-footer">
+                    <a href="#" class="btn btn-outline">Voir le classement complet</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Prêt à améliorer votre jeu d'échecs ?</h2>
+                <p>Rejoignez notre communauté de joueurs passionnés et progressez à votre rythme.</p>
+                <a href="signup.html" class="btn btn-large">Commencer gratuitement</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo-white.png" alt="La Tour Folle" class="footer-logo">
+                    <p>La Tour Folle est une plateforme dédiée à l'apprentissage et à la pratique des échecs, accessible à tous les niveaux.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="jouer.html">Jouer</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                        <li><a href="regles.html">Règles du jeu</a></li>
+                        <li><a href="notations.html">Notations</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Recevez nos actualités et conseils d'échecs</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit" class="btn">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 La Tour Folle. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/combine-css.js"></script>
+    <script src="js/chess.js"></script>
+</body>
+</html>
