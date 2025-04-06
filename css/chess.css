@@ -1,0 +1,572 @@
+/* Styles CSS pour la page de jeu d'échecs */
+
+/* En-tête de page */
+.page-header {
+    padding: 12rem 0 6rem;
+    text-align: center;
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.page-header h1 {
+    font-family: var(--font-secondary);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.page-header p {
+    font-size: 1.8rem;
+    color: var(--grey-color);
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/* Options de jeu */
+.play-options {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.option-card {
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.option-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-card p {
+    color: var(--grey-color);
+    margin-bottom: 2.5rem;
+}
+
+/* Section de jeu d'échecs */
+.chess-game {
+    padding: 6rem 0;
+    background-color: var(--light-color);
+}
+
+.chess-game h2 {
+    font-family: var(--font-secondary);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.game-settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    justify-content: center;
+    align-items: center;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+}
+
+.setting-group label {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.setting-group select {
+    padding: 1rem;
+    border: 1px solid var(--grey-light);
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.color-options {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.color-options input[type="radio"] {
+    display: none;
+}
+
+.color-option {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.color-option.white {
+    background-color: #f1f1f1;
+    color: #222;
+}
+
+.color-option.black {
+    background-color: #222;
+    color: #f1f1f1;
+}
+
+.color-option.random {
+    background: linear-gradient(135deg, #f1f1f1 50%, #222 50%);
+    color: #222;
+}
+
+input[type="radio"]:checked + .color-option {
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: 20rem 1fr 20rem;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.player-info {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.player-avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+.player-avatar.small {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.player-details {
+    text-align: center;
+}
+
+.player-details h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: var(--grey-color);
+    font-size: 1.4rem;
+}
+
+.timer {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--grey-light);
+    border-radius: 5px;
+}
+
+.captured-pieces {
+    min-height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--grey-light);
+    border-radius: 5px;
+}
+
+.chess-board {
+    aspect-ratio: 1 / 1;
+    max-width: 60rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.board-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+#board {
+    width: 100%;
+    height: 100%;
+    background-color: #B58863;
+    position: relative;
+}
+
+/* Création de l'échiquier */
+#board::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-conic-gradient(
+            #F0D9B5 0% 25%,
+            #B58863 25% 50%,
+            #F0D9B5 50% 75%,
+            #B58863 75% 100%
+        );
+    background-size: 25% 25%;
+    z-index: 0;
+}
+
+.board-notation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.files {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.ranks {
+    position: absolute;
+    top: 0;
+    left: -3rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.files span, 
+.ranks span {
+    font-weight: 600;
+    color: var(--grey-color);
+}
+
+.game-controls {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #e03131;
+}
+
+/* Historique des coups */
+.move-history {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 4rem;
+}
+
+.move-history h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.history-container {
+    max-height: 30rem;
+    overflow-y: auto;
+}
+
+.history-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-container th,
+.history-container td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.history-container th {
+    background-color: var(--grey-light);
+    font-weight: 600;
+}
+
+.history-container tbody tr:hover {
+    background-color: var(--grey-light);
+}
+
+/* Statistiques */
+.stats-section {
+    padding: 6rem 0;
+    background-color: white;
+}
+
+.stats-section h2 {
+    font-family: var(--font-secondary);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.stat-card {
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.stat-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    background-color: rgba(76, 110, 245, 0.1);
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-change {
+    font-size: 1.4rem;
+    color: var(--grey-color);
+}
+
+.stat-change.positive {
+    color: var(--success-color);
+}
+
+.stat-change.negative {
+    color: var(--danger-color);
+}
+
+/* Classement */
+.leaderboard-section {
+    padding: 6rem 0;
+    background-color: var(--light-color);
+}
+
+.leaderboard-section h2 {
+    font-family: var(--font-secondary);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.leaderboard-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+.leaderboard th {
+    background-color: var(--grey-light);
+    font-weight: 600;
+}
+
+.leaderboard tbody tr:hover {
+    background-color: var(--grey-light);
+}
+
+.leaderboard .player {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.change.positive {
+    color: var(--success-color);
+}
+
+.change.negative {
+    color: var(--danger-color);
+}
+
+.current-user {
+    background-color: rgba(76, 110, 245, 0.1);
+    font-weight: 600;
+}
+
+.leaderboard-footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Responsive design pour la page de jeu */
+@media (max-width: 1024px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .chess-board {
+        grid-row: 2;
+    }
+    
+    .player-info {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .player-avatar {
+        margin: 0;
+    }
+    
+    .player-details {
+        text-align: left;
+    }
+    
+    .opponent {
+        grid-row: 1;
+    }
+    
+    .current-player {
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .files {
+        bottom: -2.5rem;
+    }
+    
+    .ranks {
+        left: -2.5rem;
+    }
+    
+    .player-info {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .captured-pieces {
+        width: 100%;
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .leaderboard th:nth-child(4),
+    .leaderboard td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-settings {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .setting-group {
+        width: 100%;
+    }
+    
+    .player-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .player-details {
+        text-align: center;
+    }
+    
+    .leaderboard th:nth-child(5),
+    .leaderboard td:nth-child(5) {
+        display: none;
+    }
+}
