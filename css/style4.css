@@ -1,0 +1,134 @@
+/* Testimonial Controls */
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.prev-btn, .next-btn {
+    font-size: 1.8rem;
+    color: var(--grey-color);
+    transition: var(--transition);
+}
+
+.prev-btn:hover, .next-btn:hover {
+    color: var(--primary-color);
+}
+
+.dots {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--grey-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta {
+    padding: 8rem 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-family: var(--font-secondary);
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.cta p {
+    font-size: 1.8rem;
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+    opacity: 0.9;
+}
+
+.cta .btn-large {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.cta .btn-large:hover {
+    background-color: var(--light-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 6rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-about {
+    max-width: 30rem;
+}
+
+.footer-logo {
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.footer-about p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
